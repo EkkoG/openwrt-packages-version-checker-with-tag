@@ -18,6 +18,8 @@ sed -i "s/PKG_VERSION:=.*/PKG_VERSION:=$hash_version/g" $MAKEFILE
 sed -i "s/PKG_RELEASE:=.*/PKG_RELEASE:=1/g" $MAKEFILE
 sed -i "s/PKG_HASH:=.*/PKG_HASH:=$hash/g" $MAKEFILE
 
+rm -rf output.tar.gz
+
 git config user.name "bot"
 git config user.email "bot@github.com"
 git add .
