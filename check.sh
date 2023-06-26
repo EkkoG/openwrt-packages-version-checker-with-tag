@@ -2,9 +2,6 @@ if [ -z $MAKEFILE ]; then
     MAKEFILE=Makefile
 fi
 
-REPO=MetaCubeX/Clash.Meta
-TAG=Prerelease-Alpha
-
 hash_version=$(curl https://api.github.com/repos/$REPO/git/refs/tags/$TAG | jq -r '.object.sha' | cut -c1-7)
 # get tar file
 wget https://codeload.github.com/$REPO/tar.gz/$TAG -O output.tar.gz
